@@ -62,6 +62,7 @@ class TextScramble {
 // ——————————————————————————————————————————————————
 
 const phrases = [
+  "Tyler Nguyen",
   "----- ------",
   "Tyl-- Nguy--",
   "Tyler Nguyen",
