@@ -1,0 +1,70 @@
+#container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.section {
+  width: 800px;
+}
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.head {
+  justify-content: center;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+h4 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.info {
+  margin-top: 0px;
+  padding-top: 2px;
+  margin-bottom: 0px;
+  padding-bottom: 2px;
+}
+
+.date {
+  text-align: right;
+  font-weight: bold;
+}
+
+//body {
+  animation: background-color 1s infinite;
+}
+
+//h2 {
+  animation: zoom 1s infinite;
+}
+
+@keyframes background-color {
+  20% {
+    background-color: red;
+  }
+  40% {
+    background-color: orange;
+  }
+  60% {
+    background-color: green;
+  }
+  80% {
+    background-color: blue;
+  }
+  100% {
+    background-color: purple;
+  }
+}
+
+@keyframes zoom {
+  50% {
+    transform: scale(2, 2);
+  }
+}
