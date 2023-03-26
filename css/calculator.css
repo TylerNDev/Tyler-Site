@@ -3,7 +3,7 @@ body {
 }
 
 .calculator {
-  width: 400px;
+  width: 350px;
   background-color: #4e4e50;
   padding: 50px 30px;
   position: absolute;
@@ -14,7 +14,7 @@ body {
 }
 
 .display {
-  width: 100%;
+  width: 90%;
 }
 
 .display input {
@@ -34,7 +34,7 @@ body {
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  grid-gap: 15px;
   margin-top: 40px;
 }
 
