@@ -2,8 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=no" />
-    <title>center a div</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=0.9, user-scalable=no"
+    />
+    <title>Counter</title>
     <style>
       html,
       body {
@@ -23,12 +26,16 @@
       .content {
         display: inline-block;
         text-align: center;
-        padding: 5px;
+        padding: 40px;
         width: 400px;
+        border: 2px solid #6f2232;
+        border-radius: 10px;
       }
 
       #count {
         font-size: 100px;
+        font-weight: bold;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
       }
 
       button {
@@ -43,7 +50,7 @@
   <body>
     <div class="container">
       <div class="content">
-        <label id="count">0</label><br />
+        <label id="count" class="count">0</label><br />
         <button onclick="decrease()">Decrease</button>
         <button onclick="reset()">Reset</button>
         <button onclick="increase()">Increase</button>
