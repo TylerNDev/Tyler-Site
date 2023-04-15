@@ -1,0 +1,50 @@
+.parallax {
+  background-color: #1a1a1d;
+}
+
+body {
+  background-color: #1a1a1d;
+}
+
+.container {
+  height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #950740;
+  font-size: 30px;
+}
+
+.container2 {
+  height: 900px;
+}
+.container3 {
+  height: 800px;
+}
+
+.container4 {
+  height: 800px;
+}
+
+.p1 {
+  text-align: center;
+  font-size: 30px;
+  color: #6f2232;
+}
+
+.tp {
+  display: inline-block; /* To prevent full width */
+  text-align: left; /* To left-align content within */
+  margin: 0 auto;
+  margin-top: 100px;
+  font-size: 25px;
+  width: 750px;
+  color: #4e4e50;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* Add box shadow */
+  padding: 20px; /* Add some padding for visual appeal */
+}
+
+.vid {
+  margin-top: 70px;
+}
