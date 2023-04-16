@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- 
+    Name: Tyler Nguyen
+    File: thanks.html
+    Date Created: 2/15/23
+    Date Updated: 2/16/23
+    Purpose: Display Homework 1 Thank you page after hitting submit
+-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Tyler HW1 Thank you page</title>
+
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="2158383-homework2.css" />
+  </head>
+  <body>
+    <div id="header">
+      <header>
+        <table width="100%">
+          <tr>
+            <td>
+              <img
+                id="logo"
+                src="Images/Coog's Medical-logos.jpeg"
+                alt="Coogs' Medical Logo"
+                width="100px"
+              />
+              <h1>Coogs' Medical</h1>
+            </td>
+            <td valign="bottom" align="right">
+              Today's date: <span id="today"></span>
+            </td>
+          </tr>
+        </table>
+      </header>
+    </div>
+    <hr />
+
+    <center>
+      <h2>Your submission was successful!</h2>
+      <p>Thank you for registering!</p>
+      <form action="2158383-homework2.html">
+        <input type="submit" value="Submit Another Form" />
+      </form>
+    </center>
+
+    <script>
+      const d = new Date();
+      let text = d.toLocaleDateString();
+      document.getElementById("today").innerHTML = text;
+    </script>
+  </body>
+</html>
