@@ -1,8 +1,8 @@
 /*Name: Tyler Nguyen
-Name of file: 2158383-homework2.js
-Date created: 2/23/23
-Date last edited: 4/1/23
-Description: Scripts for Medical registration webpage for HW2
+Name of file: 2158383-homework3.js
+Date created: 4/10/23
+Date last edited: 4/21/23
+Description: Scripts for Medical registration webpage for HW3
 */
 
 /*       VERSION 1
