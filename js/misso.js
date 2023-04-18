@@ -58,7 +58,7 @@ class TextScramble {
 // ——————————————————————————————————————————————————
 
 const phrases = [
-  "Tyler Nguyen",
+  "Tyler for TP",
   "If MISSO,",
   "then Success",
 
