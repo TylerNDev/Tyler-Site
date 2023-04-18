@@ -15,6 +15,7 @@
   height: auto;
   width: 420px;
   margin-right: 50px;
+  border-radius: 50%;
 }
 
 .about-text {
