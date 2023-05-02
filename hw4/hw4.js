@@ -483,19 +483,19 @@ document.addEventListener("scroll", () => {
 });
 
 ////////////// COOKIES//////////////////
-function setCookie(name, value, expiresDate) {
-  const date = new Date();
-  date.setTime(date.getTime() + expiresDate * 24 * 60 * 60 * 1000);
-  let expires = "expires=" + date.toUTCString();
-  document.cookie = name + "=" + value + ";" + expires + ";path=/";
+function setCookie(name, cvalue, expiryDays) {
+  var day = new Date();
+  day.setTime(day.getTime() + expiryDays * 24 * 60 * 60 * 1000);
+  var expires = "expires=" + day.toUTCString();
+  document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
 }
 
 function getCookie(name) {
-  let cookieName = name + "-";
-  let cookies = document.cookie.split(";");
+  var cookieName = name + "=";
+  var cookies = document.cookie.split(";");
 
   for (var i = 0; i < cookies.length; i++) {
-    let cookie = cookies[i];
+    var cookie = cookies[i];
     while (cookie.charAt(0) == " ") {
       cookie = cookie.substring(1);
     }
@@ -506,22 +506,22 @@ function getCookie(name) {
   return "";
 }
 
-let firstName = getCookie("firstName");
+var firstName = getCookie("firstName");
 if (firstName != "") {
   document.getElementById("hello").innerHTML =
     "Welcome back, " +
     firstName +
-    "! <br><a href='#' id='newUser'>Not " +
+    "! <br><a href='#' id='new-user'>Not " +
     firstName +
     "? Click here to start as a new user.</a>";
 
-  document.getElementById("newUser").addEventListener("click", function () {
+  document.getElementById("new-user").addEventListener("click", function () {
     setCookie("firstName", "", -1);
     location.reload();
   });
 } else {
   document.getElementById("hello").innerHTML = "Welcome, new user!";
-  let nameInput = prompt("Please enter your first name");
+  var nameInput = prompt("Please enter your first name:");
 
   if (nameInput != "" && nameInput != null) {
     setCookie("firstName", nameInput, 30);
