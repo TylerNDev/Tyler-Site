@@ -482,7 +482,210 @@ document.addEventListener("scroll", () => {
   }
 });
 
-////////////// COOKIES//////////////////
+////////////// COOKIES VERSION 1//////////////////
+// function setCookie(name, cvalue, expiryDays) {
+//   var day = new Date();
+//   day.setTime(day.getTime() + expiryDays * 24 * 60 * 60 * 1000);
+//   var expires = "expires=" + day.toUTCString();
+//   document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
+// }
+
+// function getCookie(name) {
+//   var cookieName = name + "=";
+//   var cookies = document.cookie.split(";");
+
+//   for (var i = 0; i < cookies.length; i++) {
+//     var cookie = cookies[i];
+//     while (cookie.charAt(0) == " ") {
+//       cookie = cookie.substring(1);
+//     }
+//     if (cookie.indexOf(cookieName) == 0) {
+//       return cookie.substring(cookieName.length, cookie.length);
+//     }
+//   }
+//   return "";
+// }
+
+// var firstName = getCookie("firstName");
+// if (firstName != "") {
+//   document.getElementById("hello").innerHTML =
+//     "Hello, " +
+//     firstName +
+//     "! <br><a href='#' id='new-user'>Not " +
+//     firstName +
+//     "? Click here to start a new form.</a>";
+
+//   document.getElementById("new-user").addEventListener("click", function () {
+//     setCookie("firstName", "", -1);
+//     location.reload();
+//   });
+// } else {
+//   var nameInput = prompt("Please enter your first name:");
+//   document.getElementById("hello").innerHTML = "Welcome, " + nameInput;
+
+//   if (nameInput != "" && nameInput != null) {
+//     setCookie("firstName", nameInput, 30);
+//   }
+// }
+
+// var firstNameInput = document.getElementById("fname");
+// if (firstName != "") {
+//   firstNameInput.value = firstName;
+// }
+// firstNameInput.addEventListener("input", function () {
+//   setCookie("firstName", firstNameInput.value, 30);
+// });
+
+/////////////////// COOKIE VERSION 2 /////////////
+// function setCookie(name, cvalue, expiryDays) {
+//   var day = new Date();
+//   day.setTime(day.getTime() + expiryDays * 24 * 60 * 60 * 1000);
+//   var expires = "expires=" + day.toUTCString();
+//   document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
+// }
+
+// function getCookie(name) {
+//   var cookieName = name + "=";
+//   var cookies = document.cookie.split(";");
+
+//   for (var i = 0; i < cookies.length; i++) {
+//     var cookie = cookies[i];
+//     while (cookie.charAt(0) == " ") {
+//       cookie = cookie.substring(1);
+//     }
+//     if (cookie.indexOf(cookieName) == 0) {
+//       return cookie.substring(cookieName.length, cookie.length);
+//     }
+//   }
+//   return "";
+// }
+
+// var firstNameInput = document.getElementById("fname");
+// var lastNameInput = document.getElementById("lanme");
+// var emailInput = document.getElementById("email");
+// var phoneInput = document.getElementById("phone");
+
+// var fieldIds = ["firstNameInput", "lastNameInput", "emailInput", "phoneInput"]; // Add all input field IDs here
+// var fieldNames = ["firstName", "lastName", "email", "phone"]; // Add all corresponding cookie names here
+
+// // Loop through all the input fields and prefill them with their corresponding cookie values
+// for (var i = 0; i < fieldIds.length; i++) {
+//   var fieldId = fieldIds[i];
+//   var fieldName = fieldNames[i];
+//   var fieldValue = getCookie(fieldName);
+//   var field = document.getElementById(fieldId);
+
+//   if (fieldValue != "") {
+//     field.value = fieldValue;
+//   }
+
+//   field.addEventListener("input", function () {
+//     setCookie(fieldName, field.value, 30);
+//   });
+// }
+
+// var firstName = getCookie("firstName");
+// if (firstName != "") {
+//   document.getElementById("hello").innerHTML =
+//     "Hello, " +
+//     firstName +
+//     "! <br><a href='#' id='new-user'>Not " +
+//     firstName +
+//     "? Click here to start a new form.</a>";
+
+//   document.getElementById("new-user").addEventListener("click", function () {
+//     for (var i = 0; i < fieldNames.length; i++) {
+//       setCookie(fieldNames[i], "", -1);
+//     }
+//     location.reload();
+//   });
+// } else {
+//   var nameInput = prompt("Please enter your first name:");
+//   document.getElementById("hello").innerHTML = "Welcome, " + nameInput;
+
+//   if (nameInput != "" && nameInput != null) {
+//     setCookie("firstName", nameInput, 30);
+//   }
+// }
+
+//////////////// COOKIE VERSION 3 /////////////
+// function setCookie(name, cvalue, expiryDays) {
+//   var day = new Date();
+//   day.setTime(day.getTime() + expiryDays * 24 * 60 * 60 * 1000);
+//   var expires = "expires=" + day.toUTCString();
+//   document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
+// }
+
+// function getCookie(name) {
+//   var cookieName = name + "=";
+//   var cookies = document.cookie.split(";");
+
+//   for (var i = 0; i < cookies.length; i++) {
+//     var cookie = cookies[i];
+//     while (cookie.charAt(0) == " ") {
+//       cookie = cookie.substring(1);
+//     }
+//     if (cookie.indexOf(cookieName) == 0) {
+//       return cookie.substring(cookieName.length, cookie.length);
+//     }
+//   }
+//   return "";
+// }
+
+// var firstNameInput = document.getElementById("fname");
+// var lastNameInput = document.getElementById("lname");
+// var phoneInput = document.getElementById("phone");
+
+// // Prefill the first name input field with the value stored in the "firstName" cookie
+// var firstName = getCookie("firstName");
+// if (firstName !== "") {
+//   firstNameInput.value = firstName;
+// }
+
+// // Prefill the last name input field with the value stored in the "lastName" cookie
+// var lastName = getCookie("lastName");
+// if (lastName !== "") {
+//   lastNameInput.value = lastName;
+// }
+
+// // Prefill the phone input field with the value stored in the "phone" cookie
+// var phone = getCookie("phone");
+// if (phone !== "") {
+//   phoneInput.value = phone;
+// }
+
+// // Set a cookie with the value of the first name input field whenever it is changed
+// firstNameInput.addEventListener("input", function () {
+//   setCookie("firstName", firstNameInput.value, 30);
+// });
+
+// // Set a cookie with the value of the last name input field whenever it is changed
+// lastNameInput.addEventListener("input", function () {
+//   setCookie("lastName", lastNameInput.value, 30);
+// });
+
+// // Set a cookie with the value of the phone input field whenever it is changed
+// phoneInput.addEventListener("input", function () {
+//   setCookie("phone", phoneInput.value, 30);
+// });
+
+// // Greet the user if a first name cookie is set
+// if (firstName !== "") {
+//   document.getElementById("hello").innerHTML =
+//     "Hello, " +
+//     firstName +
+//     "! <br><a href='#' id='new-user'>Not " +
+//     firstName +
+//     "? Click here to start a new form.</a>";
+
+//   document.getElementById("new-user").addEventListener("click", function () {
+//     setCookie("firstName", "", -1);
+//     setCookie("lastName", "", -1);
+//     location.reload();
+//   });
+// }
+
+/////////////////// COOKIE VERSION 4//////////////////
 function setCookie(name, cvalue, expiryDays) {
   var day = new Date();
   day.setTime(day.getTime() + expiryDays * 24 * 60 * 60 * 1000);
@@ -506,27 +709,75 @@ function getCookie(name) {
   return "";
 }
 
+var inputs = [
+  { id: "fname", cookieName: "firstName" },
+  { id: "mname", cookieName: "middleName" },
+  { id: "lname", cookieName: "lastName" },
+  { id: "dob", cookieName: "DateofBirth" },
+  { id: "address1", cookieName: "address1" },
+  { id: "address2", cookieName: "address2" },
+  { id: "city", cookieName: "city" },
+  { id: "zcode", cookieName: "zipCode" },
+  { id: "email", cookieName: "email" },
+  { id: "phone", cookieName: "phone" },
+  { id: "userid", cookieName: "userid" },
+  // add more input fields here
+];
+
+inputs.forEach(function (input) {
+  var inputElement = document.getElementById(input.id);
+
+  // Prefill the input field with the value stored in the corresponding cookie
+  var cookieValue = getCookie(input.cookieName);
+  if (cookieValue !== "") {
+    inputElement.value = cookieValue;
+  }
+
+  // Set a cookie with the value of the input field whenever it is changed
+  inputElement.addEventListener("input", function () {
+    setCookie(input.cookieName, inputElement.value, 30);
+  });
+});
+
+// Greet the user if a first name cookie is set
 var firstName = getCookie("firstName");
-if (firstName != "") {
-  document.getElementById("hello").innerHTML =
-    "Welcome back, " +
+if (firstName !== "") {
+  document.getElementById("hello1").innerHTML =
+    "Welcome back <b>" + firstName + "! </b><br>";
+  document.getElementById("hello2").innerHTML =
+    "<a href='#' id='new-user'>Not " +
     firstName +
-    "! <br><a href='#' id='new-user'>Not " +
-    firstName +
-    "? Click here to start as a new user.</a>";
+    "? Click here to start a new form.</a>";
 
   document.getElementById("new-user").addEventListener("click", function () {
-    setCookie("firstName", "", -1);
+    inputs.forEach(function (input) {
+      setCookie(input.cookieName, "", -1);
+    });
     location.reload();
   });
-} else {
-  document.getElementById("hello").innerHTML = "Welcome, new user!";
-  var nameInput = prompt("Please enter your first name:");
-
-  if (nameInput != "" && nameInput != null) {
-    setCookie("firstName", nameInput, 30);
-  }
 }
+
+//////////////////////////TESTING CODE ////////////////////////
+
+// let testName = document.querySelector("#fname");
+
+// function saveCookie() {
+//   setCookie("fname", testName.value, 30);
+// }
+
+// function preFill() {
+//   fname.value = getCookie("fname");
+// }
+
+// window.onload = function () {
+//   // testName.value = getCookie("firstText");
+//   preFill();
+// };
+
+// //////////// DONT NEED ////////////////
+// function deleteCookie(name) {
+//   setCookie(name, "", -1);
+// }
 
 /////////// STIKCY HEADER///////////////////
 // window.onscroll = function () {
