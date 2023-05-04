@@ -175,3 +175,11 @@ header.scrolled {
   background-color: rgba(0, 0, 0, 0.4);
   opacity: 0.98;
 }
+
+#hello1 {
+  font-size: 25px;
+}
+
+#hello2 {
+  font-size: 15px;
+}
