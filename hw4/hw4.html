@@ -508,7 +508,7 @@ Description: Medical registration webpage for HW4
       function submitUserForm() {
         if (recaptcha_response.length == 0) {
           document.getElementById("g-recaptcha-error").innerHTML =
-            '<span style="color:red;">This field is required.</span>';
+            '<span style="color:red;">Please Verify you are not a robot</span>';
           return false;
         }
         return true;
