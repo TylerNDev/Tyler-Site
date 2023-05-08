@@ -14,7 +14,6 @@ Description: Medical registration webpage for HW4
     <link rel="stylesheet" href="hw4.css" />
   </head>
   <body>
-    <!-- <div id="myHeader" class="header"> -->
     <header id="myHeader" class="header">
       <table width="100%">
         <tr>
@@ -35,20 +34,28 @@ Description: Medical registration webpage for HW4
         </tr>
       </table>
     </header>
+
     <center>
       <span id="hello1"></span>
       <span id="hello2"></span>
     </center>
-    <!-- </div> -->
 
     <!--Form start here-->
     <form
+      method="post"
+      onsubmit="return submitUserForm();"
       class="form"
       name="signup"
       id="signup"
       onreset="removedisplay()"
       action="thanks.html"
     >
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LffD_IlAAAAAHX-E-099XZ8xilJagOqfJYI72p9"
+        data-callback="verifyCaptcha"
+      ></div>
+      <div id="g-recaptcha-error"></div>
       <center>
         <div class="format">
           <!--Table tag to format the form-->
@@ -485,17 +492,33 @@ Description: Medical registration webpage for HW4
         </div>
       </center>
     </form>
-
+    <!-- Re-display user Input in a table format -->
     <center>
       <p id="userinput"></p>
     </center>
 
     <hr />
-
+    <!-- IFrame Footer -->
     <iframe src="footer.html" frameborder="0" width="100%"></iframe>
 
     <script src="hw4.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+      var recaptcha_response = "";
+      function submitUserForm() {
+        if (recaptcha_response.length == 0) {
+          document.getElementById("g-recaptcha-error").innerHTML =
+            '<span style="color:red;">This field is required.</span>';
+          return false;
+        }
+        return true;
+      }
 
+      function verifyCaptcha(token) {
+        recaptcha_response = token;
+        document.getElementById("g-recaptcha-error").innerHTML = "";
+      }
+    </script>
     <!-- Custom alert box -->
     <div id="alert-box">
       <div id="alert-content">
