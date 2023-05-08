@@ -50,12 +50,6 @@ Description: Medical registration webpage for HW4
       onreset="removedisplay()"
       action="thanks.html"
     >
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LffD_IlAAAAAHX-E-099XZ8xilJagOqfJYI72p9"
-        data-callback="verifyCaptcha"
-      ></div>
-      <div id="g-recaptcha-error"></div>
       <center>
         <div class="format">
           <!--Table tag to format the form-->
@@ -490,6 +484,12 @@ Description: Medical registration webpage for HW4
             </tr>
           </table>
         </div>
+        <div
+          class="g-recaptcha"
+          data-sitekey="6LffD_IlAAAAAHX-E-099XZ8xilJagOqfJYI72p9"
+          data-callback="verifyCaptcha"
+        ></div>
+        <div id="g-recaptcha-error"></div>
       </center>
     </form>
     <!-- Re-display user Input in a table format -->
