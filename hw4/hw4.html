@@ -47,7 +47,7 @@ Description: Medical registration webpage for HW4
       id="signup"
       onreset="removedisplay()"
       action="thanks.html"
-      onsubmit="return submitUserForm();"
+      onsubmit="return submitUserForm(); return storeInput()"
     >
       <center>
         <div class="format">
@@ -471,7 +471,7 @@ Description: Medical registration webpage for HW4
                   name="submit"
                   id="submitForm"
                   class="submit-button"
-                  onclick="validateInputs(); return storeInput()"
+                  onclick="validateInputs()"
                 />
                 <input
                   type="button"
