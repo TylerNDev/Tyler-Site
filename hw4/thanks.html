@@ -12,9 +12,8 @@
     <title>Tyler HW1 Thank you page</title>
     <!-- Load external CSS styles -->
     <link rel="stylesheet" href="hw4.css" />
-    <script src="localStorage.js"></script>
   </head>
-  <body onload"displayInput();">
+  <body onload="displayInput()">
     <div id="header">
       <header>
         <table width="100%">
@@ -47,16 +46,15 @@
         <input
           type="submit"
           value="Submit Another Form"
-          onclick="return clearLocalStorage()"
+          onclick="clearLocalStorage()"
         />
       </form>
     </center>
+    <script src="localStorage.js"></script>
     <script>
       const d = new Date();
       let text = d.toLocaleDateString();
       document.getElementById("today").innerHTML = text;
-        
-      
     </script>
   </body>
 </html>
