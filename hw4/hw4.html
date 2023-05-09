@@ -42,7 +42,7 @@ Description: Medical registration webpage for HW4
 
     <!--Form start here-->
     <form
-      onsubmit="return submitUserForm();"
+      onsubmit="storeInput(); submitUserForm()"
       class="form"
       name="signup"
       id="signup"
@@ -502,6 +502,7 @@ Description: Medical registration webpage for HW4
 
     <script src="hw4.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="localStorage.js"></script>
     <script>
       var recaptcha_response = "";
       function submitUserForm() {
