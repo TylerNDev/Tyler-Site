@@ -41,14 +41,13 @@ Description: Medical registration webpage for HW4
     </center>
 
     <!--Form start here-->
-    <form
-      onsubmit="submitUserForm()"
-      class="form"
-      name="signup"
-      id="signup"
-      onreset="removedisplay()"
-      action="thanks.html"
-    >
+    <form 
+          onsubmit="return submitUserForm()" 
+          class="form" 
+          name="signup" 
+          id="signup" 
+          onreset="removedisplay()" 
+          action="thanks.html">
       <center>
         <div class="format">
           <!--Table tag to format the form-->
@@ -466,13 +465,8 @@ Description: Medical registration webpage for HW4
                   value="Clear"
                   class="reset-button"
                 />
-                <input
-                  type="submit"
-                  name="submit"
-                  id="submitForm"
-                  class="submit-button"
-                  onclick="validateInputs()"
-                />
+               <input type="submit" name="submit" id="submitForm" class="submit-button" onclick="verifyCaptcha(); storeInput(); validateInputs();" />
+
                 <input
                   type="button"
                   class="submit-button"
@@ -505,18 +499,18 @@ Description: Medical registration webpage for HW4
     <script src="localStorage.js"></script>
     <script>
       var recaptcha_response = "";
-      function submitUserForm(event) {
-  event.preventDefault();
+     function submitUserForm() {
   if (recaptcha_response.length == 0) {
     document.getElementById("g-recaptcha-error").innerHTML =
       '<span style="color:red;">Please Verify you are not a robot</span>';
+    return false;
   } else {
     // Call the storeInput() function to save the input data
     storeInput();
-    // Submit the form
-    document.getElementById("signup").submit();
+    return true;
   }
 }
+
 
       function verifyCaptcha(token) {
         recaptcha_response = token;
