@@ -53,7 +53,7 @@ function displaylocalStorage() {
   var formData = JSON.parse(localStorage.getItem("formData"));
   if (formData) {
     var formOutput =
-      "<table width="65% "class='output'><th colspan='3'> Your Information</th>";
+      "<table width='65%' class='output'><th colspan='3'> Your Information</th>";
     for (var key in formData) {
       formOutput += "<tr><td align='right'>" + key + "</td>";
       formOutput += "<td class='outputdata'>" + formData[key] + "</td></tr>";
