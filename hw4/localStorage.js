@@ -62,3 +62,8 @@ function displayInput() {
     document.getElementById("output").innerHTML = formOutput;
   }
 }
+
+function clearLocalStorage() {
+  localStorage.removeItem("formData");
+  // Add any other data you want to clear from local storage here
+}
