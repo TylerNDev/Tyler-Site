@@ -49,7 +49,7 @@ function storeInput() {
   localStorage.setItem("formData", JSON.stringify(data));
 }
 
-function displayInput() {
+function displaylocalStorage() {
   var formData = JSON.parse(localStorage.getItem("formData"));
   if (formData) {
     var formOutput =
