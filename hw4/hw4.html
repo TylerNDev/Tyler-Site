@@ -506,17 +506,18 @@ Description: Medical registration webpage for HW4
     <script>
       var recaptcha_response = "";
       function submitUserForm() {
-        if (recaptcha_response.length == 0) {
-          document.getElementById("g-recaptcha-error").innerHTML =
-            '<span style="color:red;">Please Verify you are not a robot</span>';
-          return false;
-        }
+  if (recaptcha_response.length == 0) {
+    document.getElementById("g-recaptcha-error").innerHTML =
+      '<span style="color:red;">Please Verify you are not a robot</span>';
+    return false;
+  } else {
+    // Call the storeInput() function to save the input data
+    storeInput();
 
-        // Call the storeInput() function to save the input data
-        storeInput();
-
-        return true;
-      }
+    // Submit the form
+    return true;
+  }
+}
 
       function verifyCaptcha(token) {
         recaptcha_response = token;
