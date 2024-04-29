@@ -5,7 +5,7 @@ const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
 
 yesBtn.addEventListener("click", () => {
-  question.innerHTML = "Okay, see you on Dec 8th!";
+  question.innerHTML = "Okay, see you on May 3rd!";
   gif.src =
     "https://media.tenor.com/sOwqQjN8XPgAAAAC/spongebob-squarepants-toons.gif";
 });
